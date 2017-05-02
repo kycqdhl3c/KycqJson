@@ -20,3 +20,6 @@ jar {
 		attributes('Main-Class': 'com.kycq.library.json')
 	}
 }
+
+targetCompatibility = '1.7'
+sourceCompatibility = '1.7'
