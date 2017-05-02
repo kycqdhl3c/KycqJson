@@ -1,4 +1,4 @@
-package com.kycq.library.json;
+package com.kycq.json;
 
 import org.junit.Test;
 

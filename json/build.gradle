@@ -3,7 +3,7 @@ apply plugin: 'java'
 sourceSets {
 	test {
 		java {
-			srcDirs = ["test"]  // Note @Peter's comment below
+			srcDirs = ["src/test/java"]
 		}
 	}
 }
@@ -12,6 +12,3 @@ dependencies {
 	compile fileTree(include: ['*.jar'], dir: 'libs')
 	testCompile 'junit:junit:4.12'
 }
-
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"

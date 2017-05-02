@@ -12,7 +12,6 @@ import com.kycq.library.json.bean.BitSetBean;
 import com.kycq.library.json.bean.BooleanBean;
 import com.kycq.library.json.bean.ByteBean;
 import com.kycq.library.json.bean.CharacterBean;
-import com.kycq.library.json.bean.ChildBean;
 import com.kycq.library.json.bean.CollectionIntegerBean;
 import com.kycq.library.json.bean.CollectionStringBean;
 import com.kycq.library.json.bean.DoubleBean;
@@ -630,13 +629,5 @@ public class BasicAdapterTest {
 	public void testJsonAdapter() throws IOException {
 		AdapterBean adapterBean = json.fromJson("{\"stringValue\":\"must null\"}", AdapterBean.class);
 		assertEquals(adapterBean.stringValue, null);
-	}
-	
-	@Test
-	public void testParentBean() throws IOException {
-		ChildBean childBean;
-		childBean = json.fromJson("{\"parentValue\":\"parent\",\"childValue\":\"child\"}", ChildBean.class);
-		assertEquals(childBean.parentValue, "parent");
-		assertEquals(childBean.childValue, "child");
 	}
 }
