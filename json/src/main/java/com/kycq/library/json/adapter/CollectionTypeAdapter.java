@@ -53,6 +53,15 @@ public class CollectionTypeAdapter<E> extends TypeAdapter<Collection<E>> {
 	
 	@Override
 	public void write(JsonWriter jsonWriter, Collection<E> value) throws JsonException {
+		if (value == null) {
+			jsonWriter.valueNull();
+			return;
+		}
 		
+		jsonWriter.beginArray();
+		for (E element : value) {
+			elementTypeAdapter.write(jsonWriter, element);
+		}
+		jsonWriter.endArray();
 	}
 }

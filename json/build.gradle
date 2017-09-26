@@ -14,7 +14,7 @@ dependencies {
 }
 
 jar {
-	archiveName 'json-1.0.jar'
+	archiveName 'json-1.0.0.jar'
 	manifest {
 		attributes('Manifest-Version': '1.0')
 		attributes('Main-Class': 'com.kycq.library.json')
